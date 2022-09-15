@@ -93,11 +93,11 @@ void loop()
 
 ### Distance vs measurement table 
 #### Circuit Diagram:
-![output](dev.png)
+ ![output](dev.png)
 #### Serial Moniter:
-![output](serialmon.png)
+ ![output](serialmon.png)
 #### TABLE:
-![output](table.png)
+ ![output](table.png)
 
 			
 			
