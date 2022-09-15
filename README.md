@@ -1,5 +1,6 @@
 # EXPERIMENT-NO--05-Distance measurement using Ultrasonic sensor
-
+Name : A.DIVYA MEENAKSHI
+Register NO : 212220230014
 ## AIM: 
 To interface an ultrasonic pair and measure the distance in centimeters , calculate the error
  
@@ -55,39 +56,59 @@ speed of sound in the air at 20ºC (68ºF) = 343m/s
 
 
 ### PROGRAM 
+~~~
+// C++ code
+//
+#define trigpin 2
+#define echopin 3
+long duration;
+int distance;
+void setup()
+{
+  pinMode(trigpin,OUTPUT);
+  pinMode(echopin,INPUT);
+  Serial.begin(9600);
+}
 
-
-
+void loop()
+{
+  digitalWrite(trigpin,LOW);
+  delay(20);
+  digitalWrite(trigpin,HIGH);
+  delay(20);
+  digitalWrite(trigpin,LOW);
+  //delay(20);
+  duration=pulseIn(echopin,HIGH);
+  distance=duration*0.034/2;
+  Serial.print("distance = ");
+  Serial.print(distance);
+  Serial.println("CM");
+  delay(500);
+  
+  
+}
+~~~
 
 
 
 ### Distance vs measurement table 
+#### Circuit Diagram:
+![output](dev.png)
+#### Serial Moniter:
+![output](serialmon.png)
+#### TABLE:
+![output](table.png)
 
 			
- 
 			
 			
 			
+			
+Average error = sum/ number of readings 
 
-![image](https://user-images.githubusercontent.com/36288975/190135379-52ebacd5-ccd5-460f-a4cd-4d0ad1d9b179.png)
-
-			
-			
-			
-			
-			
-			Average error = sum/ number of readings 
- 
-
-
-
-
-
+Average error=0.72
 
 
 
 ### RESULTS
-
-
-
- 
+Thus the distance value is measured in "CM" using ultrasonic sensor.
