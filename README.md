@@ -55,9 +55,10 @@ speed of sound in the air at 20ºC (68ºF) = 343m/s
 
 
 ### PROGRAM 
+
+Name : A.Divya Meenakshi
+Register Number: 212220230014
 ```
-Name : Meena .S
-Register Number: 212221240028
 #define echoPin 9
 #define trigPin 10
 long duration;
